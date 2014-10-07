@@ -1,0 +1,20 @@
+{
+  "name": "krskmap",
+  "version": "0.0.0",
+  "homepage": "https://github.com/antirek/krskmap",
+  "authors": [
+    "sergey <serge.dmitriev@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "leaflet": "~0.7.3"
+  }
+}
