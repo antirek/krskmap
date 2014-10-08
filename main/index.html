@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../lib/leaflet/dist/leaflet.css" />
+		<script type="text/javascript" src="../lib/leaflet/dist/leaflet-src.js"></script>
+
+		<style>
+		    .map{ height: calc(100vh - 70px); }
+    	</style>
+	</head>
+
+	<body>
+		<h3>Красноярск: Основная схема</h3>
+
+	    <div id="map" class="map"></div>
+
+	    <script>
+
+	        var map = L.map('map').setView([0, 0], 4);
+
+	        L.tileLayer('{z}/{y}x{x}.jpg',{
+	        	minZoom: 4,
+	            maxZoom: 7,
+	            attribution: 'Mobilon Developer Team',
+	            tms: false
+	        }).addTo(map);
+
+	    </script>
+	</body>
+</html>
