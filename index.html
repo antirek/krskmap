@@ -1,69 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
-		
-		<script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
-		<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.js"></script>
-		<style>
-		/* Customize container */
-		@media (min-width: 768px) {
-		  .container {
-		    max-width: 730px;
-		  }
-		}
-		</style>
-		<script type="text/javascript">
+		<link rel="stylesheet" href="lib/leaflet/dist/leaflet.css" />
+		<script type="text/javascript" src="lib/leaflet/dist/leaflet-src.js"></script>
 
-		</script>
+		<style>
+		    #map{ height: 600px; }
+    	</style>
 	</head>
 
 	<body>
-	<div class="container">
+	    <div id="map"></div>
 
-		<div class="header">
-			<h3>Map</h3>
-		</div>
+	    <script>
 
-		<div class="row">
-			
-  			<div class="col-md-1 col-md-offset-5">
-  				<a href="#" class="btn btn-default">
-					<span class="glyphicon glyphicon-chevron-up"></span>
-				</a>
-  			</div>
-		</div>
+	        var map = L.map('map').setView([0, 0], 4);
 
-		<div class="row">
-			<div class="col-md-1">
-				<a href="#" class="btn btn-default">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				</a>
-			</div>
-  			<div class="col-md-10" style="min-height:400px;background-color:#EFEFEF;">
-  				
-  				<div id="map">
-  					
-  				</div>
+	        L.tileLayer('http://192.168.241.14:3004/{z}/{y}x{x}.jpg',{
+	        	minZoom: 4,
+	            maxZoom: 7,
+	            attribution: 'Mobilon Developer Team',
+	            tms: false
+	        }).addTo(map);
 
-  			</div>
-  			<div class="col-md-1">
-  				<a href="#" class="btn btn-default">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-				</a>
-  			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-1 col-md-offset-5">
-				<a href="#" class="btn btn-default">
-					<span class="glyphicon glyphicon-chevron-down"></span>
-				</a>
-			</div>
-  			
-		</div>
-
-
-	</div>
+	    </script>
 	</body>
 </html>
