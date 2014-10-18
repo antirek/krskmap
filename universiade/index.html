@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="../lib/leaflet/dist/leaflet.css" />
+		<script type="text/javascript" src="../lib/leaflet/dist/leaflet-src.js"></script>
+
+		<style>
+		    .map{ height: calc(100vh - 70px); }
+    	</style>
+	</head>
+
+	<body>
+		
+		<h3><a href="/">Все схемы</a> : Красноярск: Схема объектов Универсиады 2019</h3>
+
+	    <div id="map" class="map"></div>
+
+	    <script>
+
+	        var map = L.map('map').setView([0, 0], 2);
+
+	        L.tileLayer('{z}/{x}/{y}.png',{
+	        	minZoom: 0,
+	            maxZoom: 6,
+	            attribution: '',
+	            tms: true
+	        }).addTo(map);
+
+	    </script>
+
+
+
+	</body>
+</html>
